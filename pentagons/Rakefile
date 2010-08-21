@@ -1,0 +1,5 @@
+task :default do
+  `sass -t compressed stylesheets/application.scss stylesheets/application.css`
+  `haml -q index.html.haml index.html`
+  `coffee -o javascripts/ javascripts/*.coffee`
+end
